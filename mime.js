@@ -5,14 +5,12 @@
  * @link: http://simphp.com
  */
 
-/**
- * 常用MIME类型
- * @type {{css: string, gif: string, html: string, ico: string, jpeg: string, jpg: string, js: string, json: string, pdf: string, png: string, svg: string, swf: string, tiff: string, txt: string, wav: string, wma: string, wmv: string, xml: string}}
- */
+// 常用MIME类型
 var types = {
     "css": "text/css",
     "gif": "image/gif",
     "html": "text/html",
+    "htm": "text/html",
     "ico": "image/x-icon",
     "jpeg": "image/jpeg",
     "jpg": "image/jpeg",
@@ -30,15 +28,7 @@ var types = {
     "xml": "text/xml"
 };
 
-/**
- * 默认MIME类型
- */
-var defaultMime = 'text/plain';
-
-/**
- * 所有MIME类型
- * @type {{css: string, gif: string, html: string, ico: string, jpeg: string, jpg: string, js: string, json: string, pdf: string, png: string, svg: string, swf: string, tiff: string, txt: string, wav: string, wma: string, wmv: string, xml: string}}
- */
+// 返回所有MIME类型
 exports.all = types;
 
 /**
@@ -55,5 +45,5 @@ exports.add = function(name,value){
  * @param name
  */
 exports.get = function(name){
-    return types[name] || defaultMime;
+    return types[name] || 'text/plain';
 };
