@@ -11,6 +11,7 @@ var fs = require('fs');
 var path = require('path');
 var zlib = require('zlib');
 var config = require('./config');
+var PORT = 8888;
 
 
 var callback = function (req, res) {
@@ -60,5 +61,5 @@ var callback = function (req, res) {
 };
 
 exports.start = function () {
-    http.createServer(callback).listen(8888);
+    http.createServer(callback).listen(PORT);
 };
